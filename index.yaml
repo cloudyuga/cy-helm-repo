@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  awesome-webapp:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-05-10T04:49:54.642092435Z"
+    description: A Helm chart Awesome App
+    digest: eab1cae6ffb6b42cc82c60dd8e8ddaf6062531815363e604f4ca533a8c6fcf9d
+    name: awesome-webapp
+    type: application
+    urls:
+    - https://github.com/cloudyuga/cy-helm-repo/releases/download/awesome-webapp-0.3.0/awesome-webapp-0.3.0.tgz
+    version: 0.3.0
   demo:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -11,4 +22,4 @@ entries:
     urls:
     - https://github.com/cloudyuga/cy-helm-repo/releases/download/demo-0.1.0/demo-0.1.0.tgz
     version: 0.1.0
-generated: "2023-05-10T04:21:16.735144728Z"
+generated: "2023-05-10T04:49:54.642098835Z"
